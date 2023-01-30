@@ -1,10 +1,221 @@
-.App {
-  text-align: center;
+/* snippet */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+figcaption,
+figure,
+main {
+  display: block;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+audio,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+img {
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details,
+menu {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+canvas {
+  display: inline-block;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background: #91c0eb36;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +224,172 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* general styles */
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 750px;
   min-height: 100vh;
+  text-align: center;
+}
+
+.app-container {
+  padding-top: 100px;
+}
+
+/* nav */
+.cities-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button,
+p,
+h3,
+.title,
+.today,
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  font-weight: 200;
+  letter-spacing: 0.1em;
+}
+
+.today {
+  font-size: 1.4rem;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+p,
+button {
+  color: rgba(0, 0, 0, 0.672);
+}
+
+h3 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/* btn */
+.city-btn {
+  background: transparent;
+  border-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.active-btn {
+  font-weight: 500;
+  color: rgb(0, 145, 255);
+}
+
+/* weather */
+.weather-container {
+  border: 4px solid white;
+  border-radius: 10px;
+  background: #91c0eb15;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2em 3em;
+}
+
+.featured-temp {
+  font-size: 3.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.823);
+  padding: 0;
+  margin: 0;
+}
+
+.current-weather {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.feature-img {
+  width: 150px;
+  height: auto;
+  padding-right: 15px;
+}
+
+/* weekly forecast */
+.weekly-forecast-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.single-day-forecast-container {
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.single-day-forecast-container:nth-child(4) {
+  border-right: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  display: block;
+  max-width: 100%;
+  width: 80px;
+  height: auto;
+}
+
+.icon-temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp {
+  font-size: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.823);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .weekly-forecast-container {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  ul {
+    flex-direction: column;
+  }
+  .single-day-forecast-container {
+    border-right: none;
   }
 }
